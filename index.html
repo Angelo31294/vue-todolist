@@ -11,32 +11,45 @@
     <body>
 
         <div class="container">
+            <!-- Logo -->
             <div class="logo">
                 <img src="img/logo.png" alt="logo">
             </div>
-            <div class="add_bar">
-                <input type="text" placeholder="inserisci testo to do">
-                <button type="submit">Aggiungi</button>
-            </div>
-            <div class="list">
-                <div class="card_list">
-                    <ul>
-                        <li class="flex">
-                            Fare i compiti
-                            <i class="fa-solid fa-xmark"></i>
-                        </li>
-                        <li class="flex">
-                            Fare la spesa
-                            <i class="fa-solid fa-xmark"></i>
-                        </li>
-                        <li class="flex">
-                            Andare dalla nonna
-                            <i class="fa-solid fa-xmark"></i>
-                        </li>
-                    </ul>
+            <!-- /Logo -->
+
+            <div id="app">
+
+                <!-- Search bar -->
+                <div class="add_bar">
+                    <input type="text" placeholder="inserisci testo to do">
+                    <button type="submit">Aggiungi</button>
                 </div>
+                <!-- /Search bar -->
+
+                <!-- To do list -->
+                <div class="list">
+                    <div class="card_list">
+                        <ul>
+                            <li class="flex">
+                                Fare i compiti
+                                <i class="fa-solid fa-xmark"></i>
+                            </li>
+                            <li class="flex">
+                                Fare la spesa
+                                <i class="fa-solid fa-xmark"></i>
+                            </li>
+                            <li class="flex">
+                                Andare dalla nonna
+                                <i class="fa-solid fa-xmark"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /To do list -->
+
             </div>
         </div>
-
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
