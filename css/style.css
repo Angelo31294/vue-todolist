@@ -1,0 +1,66 @@
+/* ----------------
+    RESET
+---------------- */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------
+    COMMON
+---------------- */
+
+.container{
+    width: 62.5rem;
+    height: 100vh;
+    margin: auto;
+}
+
+.logo{
+    text-align: center;
+    padding: 1.25rem 0;
+}
+
+img{
+    max-width: 25%;
+}
+
+.add_bar{
+    text-align: center;
+    padding: 0.25rem 0;
+    margin-bottom: 1.25rem;
+}
+
+input{
+    padding: .3125rem 2.5rem .3125rem .3125rem;
+    border-radius: .3125rem;
+}
+
+button{
+    padding: .3125rem .625rem;
+    border-radius: .3125rem;
+}
+
+.card_list{
+    max-width: 35%;
+    margin: auto;
+    background-color: rgba(223, 223, 223, 0.5);
+    padding: 1.25rem;
+    border-radius: .625rem;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul{
+    list-style: none;
+}
+
+ul > li{
+    padding: .3125rem 0;
+    border-bottom: .0625rem solid lightgray;
+}
