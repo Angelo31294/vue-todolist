@@ -25,13 +25,13 @@ createApp({
   methods: {
     removeTodo(i) {
       this.todos.splice(i, 1);
+    },
+    addTodo() {
+      const objNewTodo = {
+        text: this.newText,
+        done: false
+      };
+      this.todos.push(objNewTodo);
     }
-  },
-  addTodo() {
-    const objNewTodo = {
-      text: this.newText,
-      done: false
-    };
-    this.todos.push(objNewTodo);
   }
 }).mount('#app')

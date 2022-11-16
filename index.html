@@ -31,7 +31,7 @@
                     <div class="card_list">
                         <ul >
                             <li v-for="(todo, index) in todos" class="flex">
-                                <span :class="todo.done ? 'done' : ''">{{ todo.text }}</span>
+                                <span :class="todo.done ? 'done' : ''" @click="todo.done = !todo.done">{{ todo.text }}</span>
                                 <i class="fa-solid fa-xmark" @click="removeTodo(index)"></i>
                             </li>
                         </ul>
