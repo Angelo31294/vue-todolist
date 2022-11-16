@@ -64,3 +64,7 @@ ul > li{
     padding: .3125rem 0;
     border-bottom: .0625rem solid lightgray;
 }
+
+.done{
+    text-decoration: line-through;
+}

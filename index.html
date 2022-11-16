@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <title>Vue To Do List</title>
         <link rel="stylesheet" href="css/style.css">
+        <title>Vue To Do List</title>
     </head>
     <body>
 
@@ -20,27 +20,19 @@
             <div id="app">
 
                 <!-- Search bar -->
-                <div class="add_bar">
-                    <input type="text" placeholder="inserisci testo to do">
+                <form class="add_bar" @submit.prevent="addTodo">
+                    <input type="text" placeholder="inserisci testo to do" v-model="newText" required>
                     <button type="submit">Aggiungi</button>
-                </div>
+                </form>
                 <!-- /Search bar -->
 
                 <!-- To do list -->
                 <div class="list">
                     <div class="card_list">
-                        <ul>
-                            <li class="flex">
-                                Fare i compiti
-                                <i class="fa-solid fa-xmark"></i>
-                            </li>
-                            <li class="flex">
-                                Fare la spesa
-                                <i class="fa-solid fa-xmark"></i>
-                            </li>
-                            <li class="flex">
-                                Andare dalla nonna
-                                <i class="fa-solid fa-xmark"></i>
+                        <ul >
+                            <li v-for="(todo, index) in todos" class="flex">
+                                <span :class="todo.done ? 'done' : ''">{{ todo.text }}</span>
+                                <i class="fa-solid fa-xmark" @click="removeTodo(index)"></i>
                             </li>
                         </ul>
                     </div>
